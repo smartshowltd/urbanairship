@@ -16,9 +16,12 @@ module Urbanairship
       if options[:body]
         output = options[:body]
       else
+
+        parser_error = defined?(Oj::ParseError) ? Oj::ParseError : JSON::ParserError
+
         begin
           output = JSON.parse(response.body || '{}')
-        rescue JSON::ParserError
+        rescue parser_error
           output = {}
         end
       end
