@@ -1,5 +1,3 @@
-require 'rake'
-
 Gem::Specification.new do |s|
   s.name = 'urbanairship'
   s.version = '2.3.3'
@@ -9,8 +7,8 @@ Gem::Specification.new do |s|
   s.homepage = 'http://github.com/groupon/urbanairship'
   s.authors = ['Groupon, Inc.']
   s.email = ['rubygems@groupon.com']
-  s.files = FileList['README.markdown', 'LICENSE', 'Rakefile', 'lib/**/*.rb'].to_a
-  s.test_files = FileList['spec/**/*.rb'].to_a
+  s.files = ['README.markdown', 'LICENSE', 'Rakefile', 'lib/urbairship/urbanairship.rb', 'lib/urbanairship/response.rb']
+  s.test_files = ['spec/response_spec.rb', 'spec/spec_helper.rb', 'spec/urbanairship_spec.rb']
 
   s.add_dependency 'json'
 
